@@ -214,10 +214,6 @@ Deployed on **Render** (Free Tier) using Gunicorn as the WSGI server.
 
 ---
 
-## 📸 Screenshots
-
-### Prediction Form
-![Prediction Form](screenshots/prediction_form.png)
 
 ---
 
