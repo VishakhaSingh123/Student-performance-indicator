@@ -40,15 +40,16 @@ def predict_datapoint():
         results = predict_pipeline.predict(pred_df)
 
         return render_template('home.html',
-            results=round(results[0], 2),
-            gender=gender,
-            ethnicity=ethnicity,
-            parental=parental,
-            lunch=lunch,
-            test_prep=test_prep,
-            reading=reading,
-            writing=writing
-        )
+         results=round(results[0], 2),
+         gender=request.form.get('gender'),
+         ethnicity=request.form.get('ethnicity'),
+         parental=request.form.get('parental_level_of_education'),
+         lunch=request.form.get('lunch'),
+         test_prep=request.form.get('test_preparation_course'),
+        reading=request.form.get('reading_score'),
+        writing=request.form.get('writing_score')
+)
+        
 
     return render_template('home.html')
 
